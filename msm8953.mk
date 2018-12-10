@@ -283,6 +283,7 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.usb.rc \
     init.target.rc \
+    init.spectrum.rc \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
@@ -328,6 +329,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
+
+# Spectrum
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.spectrum.profile=0
 
 # TextClassifier smart selection model files
 PRODUCT_PACKAGES += \
