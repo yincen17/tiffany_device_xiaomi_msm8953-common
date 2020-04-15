@@ -1,2 +1,2 @@
 # FPS Info
-allow platform_app sysfs_fps:file read;
+allow platform_app sysfs_fps:file { open read getattr write };
