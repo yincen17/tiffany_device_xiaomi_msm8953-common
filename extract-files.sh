@@ -66,7 +66,7 @@ fi
 
 DEVICE_BLOB_ROOT="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
 
-if [ "$DEVICE" = "tissot" ]; then
+if [ "$DEVICE" = "tissot" ] || [ "$DEVICE" = "tiffany" ]; then
 patchelf --remove-needed libbacktrace.so "$DEVICE_BLOB_ROOT"/lib64/hw/gf_fingerprint.default.so
 patchelf --remove-needed libunwind.so "$DEVICE_BLOB_ROOT"/lib64/hw/gf_fingerprint.default.so
 patchelf --remove-needed libkeystore_binder.so "$DEVICE_BLOB_ROOT"/lib64/hw/gf_fingerprint.default.so
