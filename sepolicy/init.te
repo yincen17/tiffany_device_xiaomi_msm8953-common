@@ -1,4 +1,11 @@
 allow init proc_boot_reason:file r_file_perms;
+allow init default_android_hwservice:hwservice_manager add;
+allow init hidl_base_hwservice:hwservice_manager add;
+allow init hwservicemanager:binder transfer;
+
+allow init vendor_data_file:file lock;
+allow init hal_audio_default:binder call;
+allow init platform_app:binder call;
 
 # Spectrum
 allow init sysfs_devices_system_cpu:file write;
